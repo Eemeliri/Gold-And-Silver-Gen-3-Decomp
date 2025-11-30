@@ -109,6 +109,7 @@ OlivinePort_EventScript_Youngster::
 OlivinePort_EventScript_Sailor::
 	lock
 	faceplayer
+	goto_if_set FLAG_DEFEATED_RED, OlivinePort_EventScript_Sailor_AfterRed
 	goto_if_ge VAR_SSAQUA_STATE, 7, OlivinePort_EventScript_Sailor_AfterKanto
 	msgbox OlivinePort_Text_AskBoard, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, FALSE, OlivinePort_EventScript_Sailor_Refused
@@ -131,6 +132,28 @@ OlivinePort_EventScript_Sailor_AfterKanto::
 	case MULTI_B_PRESSED, OlivinePort_EventScript_Sailor_Refused
 	release
 	end
+
+OlivinePort_EventScript_Sailor_AfterRed::
+	message OlivinePort_Text_WhereSail
+	multichoice 20, 0, MULTI_OLIVINE_HARBOR_RED, FALSE
+	switch VAR_RESULT
+	case 0, OlivinePort_EventScript_ChoseVermilion
+	case 1, OlivinePort_EventScript_ChoseSouthernIsland
+	case 2, OlivinePort_EventScript_ChoseBirthIsland
+	case 3, OlivinePort_EventScript_ChoseFarawayIsland
+	case 4, OlivinePort_EventScript_ChoseBattleFrontier
+	case 5, OlivinePort_EventScript_Sailor_Refused
+	case MULTI_B_PRESSED, OlivinePort_EventScript_Sailor_Refused
+	release
+	end
+
+OlivinePort_EventScript_ChoseBattleFrontier::
+	closemessage
+	delay 20
+	call OlivinePort_EventScript_EnterShip
+	warpsilent MAP_BATTLE_FRONTIER_OUTSIDE_WEST, 20, 67
+	release
+	end	
 
 OlivinePort_EventScript_ChoseVermilion::
 	closemessage

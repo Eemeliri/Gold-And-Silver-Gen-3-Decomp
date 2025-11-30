@@ -15,7 +15,7 @@ Implemented
 - Ability to toggle between the backgrounds used for HnS or the default ones from Hoenn.
 - Auto-HMs from Pokémon Clover, where you don't need a prompt in order to use a field move.
 - Difficulty mode. Easy gives double the EXP, Normal is normal EXP, and Hard mode is having a level cap which the highest level you can reach is the Gym Leader's ace Pokémon. Defeat the Gym Leaders to lift the cap.
-- Battle Frontier!
+- Battle Frontier! (After defeating Red, you gain the option of traveling to the Battle Frontier. You can leave from either Olivine or Vermilion. However, leaving the Battle Frontier takes you to Vermilion.)
 
 
 Not Yet Implemented
