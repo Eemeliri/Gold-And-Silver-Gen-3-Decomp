@@ -4,7 +4,6 @@ I (smithk200) wanted to modify Pokémon HeartGold and SoulSilver, but am unfamil
 
 DISCLAIMER: This is not an official port of Pokémon Heart and Soul to pokeemerald-expansion; this is a fan-based project. This is not the 2.0 update, but if you don't want to wait for the official 2.0 update then this might be a good fit for you. This also removes the Nuzlocke feature and many toggelable features from Heart and Soul, but they will be added as I see fit.
 
-Also there is no bug catching contest as of now. Sorry if you enjoyed that.
 
 ## LIST OF FEATURES:
 
@@ -16,6 +15,7 @@ Implemented
 - Auto-HMs from Pokémon Clover, where you don't need a prompt in order to use a field move.
 - Difficulty mode. Easy gives double the EXP, Normal is normal EXP, and Hard mode is having a level cap which the highest level you can reach is the Gym Leader's ace Pokémon. Defeat the Gym Leaders to lift the cap.
 - Battle Frontier! (After defeating Red, you gain the option of traveling to the Battle Frontier. You can leave from either Olivine or Vermilion. However, leaving the Battle Frontier takes you to Vermilion.)
+- Bug catching contest (albeit with a few bugs)
 
 
 Not Yet Implemented

@@ -4,7 +4,7 @@ Gate_NationalPark_MapScripts::
 Gate_NationalPark_EventScript_Attendant::
 	lockall
 	faceplayer
-	goto_if_set FLAG_GARBAGEFLAG, Gate_NationalPark_EventScript_AttendantAlreadyPlayed
+	goto_if_set FLAG_DAILY_BUG_CONTEST_COMPLETED, Gate_NationalPark_EventScript_AttendantAlreadyPlayed
 	msgbox Route35NationalParkGate_Text_OfficerAskToParticipate, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, TRUE, Gate_NationalPark_EventScript_AttendantStart
 	msgbox Route35NationalParkGate_Text_TakePartInFuture, MSGBOX_DEFAULT
@@ -35,7 +35,7 @@ Gate_NationalPark_EventScript_AttendantStart::
 	call_if_eq VAR_FACING, DIR_NORTH, Gate_NationalPark_EventScript_AttendantEnterBot
 	playse SE_EXIT
 	clearflag FLAG_HIDE_BUG_CONTEST_ATTENDANT_SIDE
-	@special EnterBugContestMode
+	special EnterBugContestMode
 	setvar VAR_BUG_CONTEST_STATE, 1
 	warp MAP_NATIONAL_PARK_BUG_CONTEST, 1
 	waitstate
@@ -53,7 +53,7 @@ Gate_NationalPark_EventScript_OnlyOneMon::
 	call_if_eq VAR_FACING, DIR_NORTH, Gate_NationalPark_EventScript_AttendantEnterBot
 	playse SE_EXIT
 	clearflag FLAG_HIDE_BUG_CONTEST_ATTENDANT_SIDE
-	@special EnterBugContestMode
+	special EnterBugContestMode
 	setvar VAR_BUG_CONTEST_STATE, 1
 	warp MAP_NATIONAL_PARK_BUG_CONTEST, 1
 	waitstate
@@ -115,7 +115,7 @@ Gate_NationalPark_Movement_Player_EnterParkBot:
 Gate_NationalPark_EventScript_BAttendant::
 	lockall
 	faceplayer
-	goto_if_set FLAG_GARBAGEFLAG, Gate_NationalPark_EventScript_AttendantAlreadyPlayed
+	goto_if_set FLAG_DAILY_BUG_CONTEST_COMPLETED, Gate_NationalPark_EventScript_AttendantAlreadyPlayed
 	msgbox Route35NationalParkGate_Text_OfficerAskToParticipate, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, TRUE, Gate_NationalPark_EventScript_BAttendantStart
 	msgbox Route35NationalParkGate_Text_TakePartInFuture, MSGBOX_DEFAULT
@@ -145,7 +145,7 @@ Gate_NationalPark_EventScript_BAttendantStart::
 	call_if_eq VAR_FACING, DIR_EAST, Gate_NationalPark_EventScript_AttendantBEnterTop
 	call_if_eq VAR_FACING, DIR_NORTH, Gate_NationalPark_EventScript_AttendantBEnterBot
 	playse SE_EXIT
-	@special EnterBugContestMode
+	special EnterBugContestMode
 	setflag FLAG_HIDE_BUG_CONTEST_ATTENDANT_SIDE
 	setvar VAR_BUG_CONTEST_STATE, 5
 	warp MAP_NATIONAL_PARK_BUG_CONTEST, 40, 19
@@ -163,7 +163,7 @@ Gate_NationalPark_EventScript_OnlyOneMonB::
 	call_if_eq VAR_FACING, DIR_EAST, Gate_NationalPark_EventScript_AttendantBEnterTop
 	call_if_eq VAR_FACING, DIR_NORTH, Gate_NationalPark_EventScript_AttendantBEnterBot
 	playse SE_EXIT
-	@special EnterBugContestMode
+	special EnterBugContestMode
 	setflag FLAG_HIDE_BUG_CONTEST_ATTENDANT_SIDE
 	setvar VAR_BUG_CONTEST_STATE, 5
 	warp MAP_NATIONAL_PARK_BUG_CONTEST, 40, 19

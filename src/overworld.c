@@ -4,6 +4,7 @@
 #include "battle_setup.h"
 #include "berry.h"
 #include "bg.h"
+#include "bug_contest.h"
 #include "cable_club.h"
 #include "clock.h"
 #include "dexnav.h"
@@ -3707,4 +3708,26 @@ bool8 ScrFunc_settimeofday(struct ScriptContext *ctx)
 {
     SetTimeOfDay(ScriptReadByte(ctx));
     return FALSE;
+}
+
+void CB2_BugContestWhiteOut(void){
+    u8 state;
+
+    if (++gMain.state >= 120)
+    {
+        FieldClearVBlankHBlankCallbacks();
+        StopMapMusic();
+        ResetSafariZoneFlag_();
+
+        ResetInitialPlayerAvatarState();
+        ScriptContext_Init();
+        UnlockPlayerFieldControls();
+        gFieldCallback = FieldCB_WarpExitFadeFromBlack;
+        state = 0;
+        DoMapLoadLoop(&state);
+        SetFieldVBlankCallback();
+        SetMainCallback1(CB1_Overworld);
+        SetMainCallback2(CB2_Overworld);
+        ScriptContext_SetupScript(BugContest_EventScript_WhiteOut);
+    }
 }

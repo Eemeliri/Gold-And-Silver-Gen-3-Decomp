@@ -581,3 +581,9 @@ gSpecials::
 	def_special SetSpAtkStat
 	def_special SetSpDefStat
 	def_special SetVermilionTrashCans
+	def_special EnterBugContestMode
+	def_special ExitBugContestMode
+	def_special TransferBugContestMon
+	def_special JudgeBugContestMon
+	def_special RemoveSafariBalls
+	def_special ShowBugContestChosenMon

@@ -713,7 +713,7 @@
 #define FLAG_VISITED_BATTLE_FRONTIER  0x29A // Unused Flag
 #define FLAG_FRONTIER_SECOND_CLERK  0x29B // Unused Flag
 #define FLAG_HIDE_BATTLE_FRONTIER_RECEPTION_GATE_SCOTT  0x29C // Unused Flag
-#define FLAG_UNUSED_0x29D  0x29D // Unused Flag
+#define FLAG_SYS_BUG_CONTEST_MODE  0x29D // Unused Flag
 #define FLAG_UNUSED_0x29E  0x29E // Unused Flag
 #define FLAG_UNUSED_0x29F  0x29F // Unused Flag
 #define FLAG_UNUSED_0x2A0  0x2A0 // Unused Flag
@@ -1575,7 +1575,7 @@
 #define FLAG_UNUSED_0x920                           (DAILY_FLAGS_START + 0x0)  // Unused Flag
 #define FLAG_DAILY_CONTEST_LOBBY_RECEIVED_BERRY     (DAILY_FLAGS_START + 0x1)
 #define FLAG_DAILY_SECRET_BASE                      (DAILY_FLAGS_START + 0x2)
-#define FLAG_UNUSED_0x923                           (DAILY_FLAGS_START + 0x3)  // Unused Flag
+#define FLAG_DAILY_BUG_CONTEST_COMPLETED            (DAILY_FLAGS_START + 0x3)  // Unused Flag
 #define FLAG_UNUSED_0x924                           (DAILY_FLAGS_START + 0x4)  // Unused Flag
 #define FLAG_UNUSED_0x925                           (DAILY_FLAGS_START + 0x5)  // Unused Flag
 #define FLAG_UNUSED_0x926                           (DAILY_FLAGS_START + 0x6)  // Unused Flag
