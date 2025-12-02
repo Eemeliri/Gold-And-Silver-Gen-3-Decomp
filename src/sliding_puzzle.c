@@ -49,7 +49,7 @@ static u8 sSavedButtonMode = 0;
 static bool8 sSavedButtonModeValid = FALSE;
 
 
-static const u32 sSlidingPuzzle_Gfx[]     = INCBIN_U32("graphics/sliding_puzzle/bg.4bpp.smol");
+static const u32 sSlidingPuzzle_Gfx[]     = INCBIN_U32("graphics/sliding_puzzle/bg.4bpp.lz");
 static const u32 sSlidingPuzzle_Tilemap[] = INCBIN_U32("graphics/sliding_puzzle/map.bin.lz");
 static const u16 sSlidingPuzzle_Pal[]     = INCBIN_U16("graphics/sliding_puzzle/bg.gbapal");
 
