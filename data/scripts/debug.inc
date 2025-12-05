@@ -9,11 +9,16 @@ Debug_ShowFieldMessageStringVar4::
 	goto Debug_MessageEnd
 
 Debug_CheatStart::
-	givemon SPECIES_CYNDAQUIL, 10, ITEM_NONE
+	givemon SPECIES_CYNDAQUIL, 1, ITEM_NONE
+	givemon SPECIES_PIDGEY, 1, ITEM_NONE
 	setvar VAR_NEWBARKTOWN_LABSTATE, 6
 	setvar VAR_NEWBARK_TOWN_STATE, 5
 	setflag FLAG_SYS_POKEMON_GET
-	giveitem ITEM_HM_SURF
+	setflag FLAG_SYS_POKEDEX_GET
+	setflag FLAG_HIDE_MOMS_FRIEND
+	setflag FLAG_RECEIVED_FIRST_BALLS
+	@giveitem ITEM_HM_SURF
+	giveitem ITEM_POKE_BALL, 100
 	special SetUnlockedPokedexFlags
 	special EnableNationalPokedex
 	additem ITEM_ACRO_BIKE

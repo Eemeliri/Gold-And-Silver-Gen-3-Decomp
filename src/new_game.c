@@ -101,7 +101,7 @@ static void SetDefaultOptions(void)
     gSaveBlock2Ptr->optionsTextSpeed = OPTIONS_TEXT_SPEED_FAST;
     gSaveBlock2Ptr->optionsWindowFrameType = 0;
     gSaveBlock2Ptr->optionsSound = OPTIONS_SOUND_STEREO;
-    gSaveBlock2Ptr->optionsBattleStyle = OPTIONS_BATTLE_STYLE_SHIFT;
+    gSaveBlock2Ptr->optionsBattleStyle = OPTIONS_BATTLE_STYLE_SET;
     gSaveBlock2Ptr->optionsBattleSceneOff = FALSE;
     gSaveBlock2Ptr->regionMapZoom = FALSE;
     gSaveBlock2Ptr->optionsEXPShare = FALSE;
@@ -110,8 +110,9 @@ static void SetDefaultOptions(void)
     gSaveBlock2Ptr->optionsPSS = FALSE;
     gSaveBlock2Ptr->optionsTerrain = FALSE;
     gSaveBlock2Ptr->optionsRunType = 0;
-    gSaveBlock2Ptr->optionsDifficulty = OPTIONS_DIFFICULTY_HARD;
-    gSaveBlock2Ptr->optionsFont = 0;
+    gSaveBlock2Ptr->optionsDifficulty = OPTIONS_DIFFICULTY_NORMAL;
+    gSaveBlock2Ptr->optionsFont = 1;
+    gSaveBlock2Ptr->optionsMusic = 0;
                
 }
 
@@ -143,9 +144,10 @@ static void ClearFrontierRecord(void)
 
 static void WarpToTruck(void)
 {
-    SetWarpDestination(MAP_GROUP(MAP_NEW_BARK_TOWN_PLAYERS_HOUSE_2F), MAP_NUM(MAP_NEW_BARK_TOWN_PLAYERS_HOUSE_2F), WARP_ID_NONE, -1, -1);
+    SetWarpDestination(MAP_GROUP(MAP_NEW_BARK_TOWN_PLAYERS_HOUSE_2F), MAP_NUM(MAP_NEW_BARK_TOWN_PLAYERS_HOUSE_2F), WARP_ID_NONE, 1, 6);
     WarpIntoMap();
 }
+
 
 void Sav2_ClearSetDefault(void)
 {

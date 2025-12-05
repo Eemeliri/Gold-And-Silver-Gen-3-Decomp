@@ -1,31 +1,28 @@
 gText_Birch_Welcome::
 	.string "Hi! Sorry to keep you waiting!\p"
-	.string "Welcome to the world of POKéMON!\p"
-	.string "My name is BIRCH.\p"
-	.string "But everyone calls me the POKéMON\n"
+	.string "Welcome to the world of Pokémon!\p"
+	.string "My name is OAK.\p"
+	.string "People call me the Pokémon\n"
 	.string "PROFESSOR.\p"
 	.string "$"
 
 gText_Birch_Pokemon::
-	.string "This is what we call a “POKéMON.”\p"
+	.string "This is what we call a “Pokémon.”\p"
 	.string "\n"
 	.string "$"
 
 gText_Birch_MainSpeech::
 	.string "This world is widely inhabited by\n"
-	.string "creatures known as POKéMON.\p"
-	.string "We humans live alongside POKéMON,\n"
-	.string "at times as friendly playmates, and\l"
-	.string "at times as cooperative workmates.\p"
-	.string "And sometimes, we band together\n"
-	.string "and battle others like us.\p"
-	.string "But despite our closeness, we don't\n"
-	.string "know everything about POKéMON.\p"
-	.string "In fact, there are many, many\n"
-	.string "secrets surrounding POKéMON.\p"
-	.string "To unravel POKéMON mysteries,\n"
-	.string "I've been undertaking research.\l"
-	.string "That's what I do.\p"
+	.string "creatures known as Pokémon.\p"
+	.string "People and Pokémon live together,\n"
+	.string "by supporting each other.\p"
+	.string "Some people play with Pokémon,\n"
+	.string "some battle with them. \p"
+	.string "But we don't know everything about\n"
+	.string "Pokémon yet. \p"
+	.string "There are still many mysteries\n"
+	.string "to solve. That's why I study\l"
+	.string "Pokémon every day.\p"
 	.string "$"
 
 gText_Birch_AndYouAre::
@@ -43,10 +40,9 @@ gText_Birch_SoItsPlayer::
 	.string "So it's {PLAYER}{KUN}?$"
 
 gText_Birch_YourePlayer::
-	.string "Ah, okay!\p"
-	.string "You're {PLAYER}{KUN} who's moving to my\n"
-	.string "hometown of LITTLEROOT.\l"
-	.string "I get it now!\p"
+	.string "{PLAYER}{KUN}, are you ready?\p"
+	.string "Your very own adventure is about\n"
+	.string "to unfold.\p"
 	.string "$"
 
 gText_Birch_AreYouReady::
@@ -99,6 +95,9 @@ gText_Birch_YesNuzlocke::
 	.string "$"
 
 gText_Birch_Farewell::
-	.string "Well, I'll be expecting you later.\n"
-	.string "Come see me in my POKéMON LAB.\p"
+	.string "You'll face fun times and tough\n"
+	.string "challenges.\p"
+	.string "A world of dreams and adventures\n"
+	.string "with Pokémon awaits! Let's go!\p"
+	.string "I'll be seeing you later!\p"
 	.string "$"

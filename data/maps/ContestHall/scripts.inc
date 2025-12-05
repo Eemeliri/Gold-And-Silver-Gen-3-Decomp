@@ -243,7 +243,7 @@ ContestHall_EventScript_RandomAudienceCook::
 	return
 
 ContestHall_EventScript_RandomAudienceLass::
-	setvar VAR_TEMP_1, OBJ_EVENT_GFX_LASS
+	setvar VAR_TEMP_1, OBJ_EVENT_GFX_FR_LASS
 	return
 
 ContestHall_EventScript_RandomAudienceOldWoman::
@@ -319,7 +319,7 @@ ContestHall_EventScript_CreateSuperContestAudience::
 	createvobject OBJ_EVENT_GFX_WOMAN_2, 11, 12, 4, 3, DIR_WEST
 	createvobject OBJ_EVENT_GFX_WOMAN_3, 12, 12, 7, 3, DIR_WEST
 	createvobject OBJ_EVENT_GFX_LITTLE_GIRL, 13, 12, 8, 3, DIR_WEST
-	createvobject OBJ_EVENT_GFX_LASS, 20, 3, 2, 3, DIR_SOUTH
+	createvobject OBJ_EVENT_GFX_FR_LASS, 20, 3, 2, 3, DIR_SOUTH
 	createvobject OBJ_EVENT_GFX_SCIENTIST_1, 24, 11, 2, 3, DIR_SOUTH
 	return
 

@@ -167,7 +167,7 @@ static const u16 sSecretBaseOwnerGfxIds[10] =
     OBJ_EVENT_GFX_CAMPER,
     OBJ_EVENT_GFX_MAN_3,
     // Female
-    OBJ_EVENT_GFX_LASS,
+    OBJ_EVENT_GFX_FR_LASS,
     OBJ_EVENT_GFX_GIRL_3,
     OBJ_EVENT_GFX_WOMAN_2,
     OBJ_EVENT_GFX_PICNICKER,

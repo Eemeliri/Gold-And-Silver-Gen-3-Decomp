@@ -4748,6 +4748,10 @@ void ItemUseCB_Medicine(u8 taskId, TaskFunc task)
     {
         cannotUse = TRUE;
     }
+    if ((ITEM4_REVIVE) && (FlagGet(FLAG_NUZLOCKE)))
+    {
+        cannotUse = TRUE;
+    }
     else
     {
         canHeal = IsHPRecoveryItem(item);

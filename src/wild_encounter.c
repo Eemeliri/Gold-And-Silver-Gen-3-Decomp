@@ -531,7 +531,7 @@ void CreateWildMon(u16 species, u8 level)
     }
     
     // NOW check Nuzlocke indicator after Pokemon is created and has personality
-    if (IsNuzlockeActive() && FlagGet(FLAG_SYS_POKEDEX_GET))
+    if (IsNuzlockeActive() && FlagGet(FLAG_RECEIVED_FIRST_BALLS))
     {
         u8 currentLocation = GetCurrentRegionMapSectionId();
         bool8 locationAlreadyUsed = HasWildPokemonBeenSeenInLocation(currentLocation, FALSE);

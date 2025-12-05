@@ -35,6 +35,23 @@
 #include "constants/union_room.h"
 #include "constants/flags.h"
 
+// --- extra badges on the trainer card (local to this file) ---
+#define NUM_BADGES_FRONT 8                // keep front page at 8
+#define NUM_BADGES_EXTRA 8                // badges 9–16
+#define NUM_BADGES_TOTAL (NUM_BADGES + NUM_BADGES_EXTRA)
+
+// Kanto (badges 9–16) flags (order is shown left-to-right on card back)
+static const u16 sKantoGymFlags[NUM_BADGES_EXTRA] = {
+    FLAG_DEFEATED_PEWTER_GYM,
+    FLAG_DEFEATED_CERULEAN_GYM,
+    FLAG_DEFEATED_VERMILION_GYM,
+    FLAG_DEFEATED_CELADON_GYM,
+    FLAG_DEFEATED_SAFFRON_GYM,
+    FLAG_DEFEATED_FUCHSIA_GYM,
+    FLAG_DEFEATED_CINNABAR_ISLAND_GYM,
+    FLAG_DEFEATED_VIRIDIAN_GYM,
+};
+
 enum {
     WIN_MSG,
     WIN_CARD_TEXT,
@@ -60,7 +77,7 @@ struct TrainerCardData
     bool8 unused_E;
     bool8 unused_F;
     bool8 hasTrades;
-    u8 badgeCount[NUM_BADGES];
+    u8 badgeCount[NUM_BADGES_TOTAL];
     u8 easyChatProfile[TRAINER_CARD_PROFILE_LENGTH][13];
     u8 textPlayersCard[70];
     u8 textHofTime[70];
@@ -169,6 +186,7 @@ static bool8 Task_AnimateCardFlipUp(struct Task *task);
 static bool8 Task_EndCardFlip(struct Task *task);
 static void UpdateCardFlipRegs(u16);
 static void LoadMonIconGfx(void);
+static void DrawExtraBadgesOnBack(void);
 
 static const u32 sTrainerCardStickers_Gfx[]      = INCBIN_U32("graphics/trainer_card/frlg/stickers.4bpp.smol");
 static const u16 sUnused_Pal[]                   = INCBIN_U16("graphics/trainer_card/unused.gbapal");
@@ -1579,6 +1597,29 @@ static void DrawCardBackStats(void)
     CopyBgTilemapBufferToVram(3);
 }
 
+//Hns Draw badges 9–16 in a single row on the back page, bottom margin.
+static void DrawExtraBadgesOnBack(void)
+{
+    u8 i, x = 4;
+    u8 palNum = (sData->cardType != CARD_TYPE_FRLG) ? 6 : 3;
+    u16 tileNum = 192 + 32;          // <-- second row of the combined sheet
+
+    for (i = 0; i < NUM_BADGES_EXTRA; i++, tileNum += 2, x += 3)
+    {
+        if (sData->badgeCount[NUM_BADGES_FRONT + i])
+        {
+            // top halves (row y=14)
+            FillBgTilemapBufferRect(3, tileNum,     x,     11, 1, 1, palNum);
+            FillBgTilemapBufferRect(3, tileNum + 1, x + 1, 11, 1, 1, palNum);
+            // bottom halves (row y=15)
+            FillBgTilemapBufferRect(3, tileNum + 16,     x, 12, 1, 1, palNum);
+            FillBgTilemapBufferRect(3, tileNum + 17, x + 1, 12, 1, 1, palNum);
+        }
+    }
+
+    CopyBgTilemapBufferToVram(3);
+}
+
 static void BlinkTimeColon(void)
 {
     if (++sData->timeColonBlinkTimer > 60)
@@ -1715,7 +1756,10 @@ static bool8 Task_DrawFlippedCardSide(struct Task *task)
             break;
         case 3:
             if (!sData->onBack)
+            {
                 DrawCardBackStats();
+                DrawExtraBadgesOnBack();  // <-- badges 9–16 on the back
+            }
             else
                 FillWindowPixelBuffer(WIN_TRAINER_PIC, PIXEL_FILL(0));
             break;

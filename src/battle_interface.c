@@ -1789,7 +1789,7 @@ static void TryAddPokeballIconToHealthbox(u8 healthboxSpriteId, bool8 noStatus)
     if (IsOnPlayerSide(battler))
         return;
     if (!GetSetPokedexFlag(SpeciesToNationalPokedexNum(GetMonData(GetBattlerMon(battler), MON_DATA_SPECIES)), FLAG_GET_CAUGHT) 
-    && (!IsWildPokemonCatchableInNuzlocke() || !IsNuzlockeActive() || !FlagGet(FLAG_SYS_POKEDEX_GET)))
+    && (!IsWildPokemonCatchableInNuzlocke() || !IsNuzlockeActive() || !FlagGet(FLAG_RECEIVED_FIRST_BALLS)))
         return;
 
     healthBarSpriteId = gSprites[healthboxSpriteId].hMain_HealthBarSpriteId;
@@ -1798,7 +1798,7 @@ static void TryAddPokeballIconToHealthbox(u8 healthboxSpriteId, bool8 noStatus)
     {
         if (GetSetPokedexFlag(SpeciesToNationalPokedexNum(GetMonData(GetBattlerMon(battler), MON_DATA_SPECIES)), FLAG_GET_CAUGHT))
             CpuCopy32(GetHealthboxElementGfxPtr(HEALTHBOX_GFX_STATUS_BALL_CAUGHT), (void *)(OBJ_VRAM0 + (gSprites[healthBarSpriteId].oam.tileNum + 8) * TILE_SIZE_4BPP), 32);
-        else if (IsWildPokemonCatchableInNuzlocke() && IsNuzlockeActive() && FlagGet(FLAG_SYS_POKEDEX_GET))
+        else if (IsWildPokemonCatchableInNuzlocke() && IsNuzlockeActive() && FlagGet(FLAG_RECEIVED_FIRST_BALLS))
             CpuCopy32(GetHealthboxElementGfxPtr(HEALTHBOX_GFX_NUZLOCKE_INDICATOR), (void*)(OBJ_VRAM0 + (gSprites[healthBarSpriteId].oam.tileNum + 8) * TILE_SIZE_4BPP), 32);
     }
     else

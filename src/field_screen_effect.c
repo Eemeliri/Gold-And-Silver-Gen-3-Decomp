@@ -1445,7 +1445,7 @@ static void Task_RushInjuredPokemonToCenter(u8 taskId)
         if (WaitForWeatherFadeIn() == TRUE)
         {
             DestroyTask(taskId);
-            if (gTasks[taskId].tIsPlayerHouse)
+            if (gMapHeader.regionMapSectionId == MAPSEC_NEW_BARK_TOWN)
                 ScriptContext_SetupScript(EventScript_AfterWhiteOutMomHeal);
             else
                 ScriptContext_SetupScript(EventScript_AfterWhiteOutHeal);

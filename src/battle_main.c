@@ -3692,7 +3692,7 @@ static void DoBattleIntro(void)
         break;
     case BATTLE_INTRO_STATE_NUZLOCKE_MESSAGE:
         // Show Nuzlocke encounter message for wild battles
-        if (!(gBattleTypeFlags & BATTLE_TYPE_TRAINER) && IsNuzlockeActive() && FlagGet(FLAG_SYS_POKEDEX_GET))
+        if (!(gBattleTypeFlags & BATTLE_TYPE_TRAINER) && IsNuzlockeActive() && FlagGet(FLAG_RECEIVED_FIRST_BALLS))
         {
             u16 species = GetMonData(&gEnemyParty[0], MON_DATA_SPECIES);
             u32 personality = GetMonData(&gEnemyParty[0], MON_DATA_PERSONALITY);

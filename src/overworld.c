@@ -380,9 +380,6 @@ void DoWhiteOut(void)
 {
     RunScriptImmediately(EventScript_WhiteOut);
     HealPlayerParty();
-    // Handle Nuzlocke whiteout - mark all party Pokemon as dead
-    if (IsNuzlockeActive())
-        NuzlockeHandleWhiteout();
     Overworld_ResetStateAfterWhiteOut();
     SetWarpDestinationToLastHealLocation();
     WarpIntoMap();

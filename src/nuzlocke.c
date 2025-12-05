@@ -41,7 +41,7 @@ static u8 GetNuzlockeLocationId(u8 currLocation)
     case MAPSEC_INDIGO_PLATEAU:
     case MAPSEC_MT_SILVER:
         return currLocation;
-        
+              
     // Routes are separate areas
     case MAPSEC_ROUTE_29:
     case MAPSEC_ROUTE_30:
@@ -130,7 +130,7 @@ bool8 HasWildPokemonBeenSeenInLocation(u8 location, bool8 setEncounteredIfFirst)
     
     location = GetNuzlockeLocationId(location);
     
-    if (!FlagGet(FLAG_NUZLOCKE) || !FlagGet(FLAG_SYS_POKEDEX_GET))
+    if (!FlagGet(FLAG_NUZLOCKE) || !FlagGet(FLAG_RECEIVED_FIRST_BALLS))
     {
         // Clear all encounter tracking if Nuzlocke not active
         VarSet(VAR_NUZLOCKE_ENCOUNTERS_1, 0);
@@ -143,10 +143,150 @@ bool8 HasWildPokemonBeenSeenInLocation(u8 location, bool8 setEncounteredIfFirst)
         VarSet(VAR_NUZLOCKE_CATCHES_4, 0);
         return 0;
     }
-    
+    switch (location)
+{
+    case MAPSEC_ROUTE_29:
+        varToCheck = 0;
+        bitToCheck = 0;
+        break;
+    case MAPSEC_ROUTE_30:
+        varToCheck = 0;
+        bitToCheck = 1;
+        break;
+    case MAPSEC_ROUTE_31:
+        varToCheck = 0;
+        bitToCheck = 2;
+        break;
+    case MAPSEC_ROUTE_32:
+        varToCheck = 0;
+        bitToCheck = 3;
+        break;
+    case MAPSEC_ROUTE_33:
+        varToCheck = 0;
+        bitToCheck = 4;
+        break;
+    case MAPSEC_ROUTE_34:
+        varToCheck = 0;
+        bitToCheck = 5;
+        break;
+    case MAPSEC_ROUTE_35:
+        varToCheck = 0;
+        bitToCheck = 6;
+        break;
+    case MAPSEC_ROUTE_36:
+        varToCheck = 0;
+        bitToCheck = 7;
+        break;
+    case MAPSEC_ROUTE_37:
+        varToCheck = 0;
+        bitToCheck = 8;
+        break;
+    case MAPSEC_ROUTE_38:
+        varToCheck = 0;
+        bitToCheck = 9;
+        break;
+    case MAPSEC_ROUTE_39:
+        varToCheck = 0;
+        bitToCheck = 10;
+        break;
+    case MAPSEC_ROUTE_40:
+        varToCheck = 0;
+        bitToCheck = 11;
+        break;
+    case MAPSEC_ROUTE_41:
+        varToCheck = 0;
+        bitToCheck = 12;
+        break;
+    case MAPSEC_ROUTE_42:
+        varToCheck = 0;
+        bitToCheck = 13;
+        break;
+    case MAPSEC_ROUTE_43:
+        varToCheck = 0;
+        bitToCheck = 14;
+        break;
+    case MAPSEC_ROUTE_44:
+        varToCheck = 0;
+        bitToCheck = 15;
+        break;
+    case MAPSEC_ROUTE_45:
+        varToCheck = 1;
+        bitToCheck = 0;
+        break;
+    case MAPSEC_ROUTE_46:
+        varToCheck = 1;
+        bitToCheck = 1;
+        break;
+    case MAPSEC_ROUTE_47:
+        varToCheck = 1;
+        bitToCheck = 2;
+        break;
+    case MAPSEC_ROUTE_48:
+        varToCheck = 1;
+        bitToCheck = 3;
+        break;
+    case MAPSEC_NEW_BARK_TOWN:
+        varToCheck = 1;
+        bitToCheck = 4;
+        break;
+    case MAPSEC_CHERRYGROVE_CITY:
+        varToCheck = 1;
+        bitToCheck = 5;
+        break;
+    case MAPSEC_VIOLET_CITY:
+        varToCheck = 1;
+        bitToCheck = 6;
+        break;
+    case MAPSEC_AZALEA_TOWN:
+        varToCheck = 1;
+        bitToCheck = 7;
+        break;
+    case MAPSEC_GOLDENROD_CITY:
+        varToCheck = 1;
+        bitToCheck = 8;
+        break;
+    case MAPSEC_ECRUTEAK_CITY:
+        varToCheck = 1;
+        bitToCheck = 9;
+        break;
+    case MAPSEC_OLIVINE_CITY:
+        varToCheck = 1;
+        bitToCheck = 10;
+        break;
+    case MAPSEC_CIANWOOD_CITY:
+        varToCheck = 1;
+        bitToCheck = 11;
+        break;
+    case MAPSEC_SAFARI_ZONE_GATE:
+        varToCheck = 1;
+        bitToCheck = 12;
+        break;
+    case MAPSEC_MAHOGANY_TOWN:
+        varToCheck = 1;
+        bitToCheck = 13;
+        break;
+    case MAPSEC_LAKE_OF_RAGE:
+        varToCheck = 1;
+        bitToCheck = 14;
+        break;
+    case MAPSEC_BLACKTHORN_CITY:
+        varToCheck = 1;
+        bitToCheck = 15;
+        break;
+    case MAPSEC_INDIGO_PLATEAU:
+        varToCheck = 2;
+        bitToCheck = 0;
+        break;
+    case MAPSEC_MT_SILVER:
+        varToCheck = 2;
+        bitToCheck = 1;
+        break;
+    default:
+        return 0;
+}
     // Map location to variable index and bit position
-    varToCheck = location / 16;  // Each variable stores 16 locations (16 bits)
-    bitToCheck = location % 16;
+    //varToCheck = location / 16;  // Each variable stores 16 locations (16 bits)
+    //bitToCheck = location % 16;
     
     if (varToCheck >= 4)  // Safety check - we only have 4 variables
         return 0;
@@ -180,7 +320,7 @@ bool8 HasWildPokemonBeenCaughtInLocation(u8 location, bool8 setCaughtIfCaught)
     
     location = GetNuzlockeLocationId(location);
     
-    if (!FlagGet(FLAG_NUZLOCKE) || !FlagGet(FLAG_SYS_POKEDEX_GET))
+    if (!FlagGet(FLAG_NUZLOCKE) || !FlagGet(FLAG_RECEIVED_FIRST_BALLS))
         return 0;
     
     // Map location to variable index and bit position
@@ -225,18 +365,24 @@ bool8 IsFirstEncounterInArea(u16 mapGroup, u16 mapNum)
 // Dead Pokemon functions
 bool8 IsMonDead(struct Pokemon *mon)
 {
+    u32 hp;
     if (!IsNuzlockeActive())
         return FALSE;
     
-    return GetMonData(mon, MON_DATA_IS_DEAD);
+    hp = GetMonData(mon, MON_DATA_HP);
+    if (hp == 0);
+        return TRUE;
 }
 
 bool8 IsBoxMonDead(struct BoxPokemon *boxMon)
 {
+    u32 hp;
     if (!IsNuzlockeActive())
         return FALSE;
     
-    return GetBoxMonData(boxMon, MON_DATA_IS_DEAD);
+    hp = GetBoxMonData(boxMon, MON_DATA_HP);
+    if (hp == 0);
+        return TRUE;
 }
 
 void SetMonDead(struct Pokemon *mon, bool8 isDead)
@@ -300,7 +446,7 @@ void NuzlockeHandleFaint(struct Pokemon *mon)
         return;
     
     // Don't mark as dead until player receives Pokédex
-    if (!FlagGet(FLAG_SYS_POKEDEX_GET))
+    if (!FlagGet(FLAG_RECEIVED_FIRST_BALLS))
         return;
     
     // Check if the Pokemon's HP is 0 (just fainted)
@@ -316,7 +462,7 @@ void NuzlockeHandleWhiteout(void)
         return;
     
     // Don't mark as dead until player receives Pokédex
-    if (!FlagGet(FLAG_SYS_POKEDEX_GET))
+    if (!FlagGet(FLAG_RECEIVED_FIRST_BALLS))
         return;
     
     int i;
