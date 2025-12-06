@@ -1369,6 +1369,7 @@ static void NamingScreen_CreatePCIcon(void);
 static void NamingScreen_CreateMonIcon(void);
 static void NamingScreen_CreateWaldaDadIcon(void);
 static void NamingScreen_CreateCodeIcon(void);
+static void NamingScreen_CreateSilverIcon(void);
 
 static void (*const sIconFunctions[])(void) =
 {
@@ -1378,6 +1379,7 @@ static void (*const sIconFunctions[])(void) =
     NamingScreen_CreateMonIcon,
     NamingScreen_CreateWaldaDadIcon,
     NamingScreen_CreateCodeIcon,
+    NamingScreen_CreateSilverIcon,
 };
 
 static void CreateInputTargetIcon(void)
@@ -1433,6 +1435,14 @@ static void NamingScreen_CreateCodeIcon(void)
     u8 spriteId;
     spriteId = CreateObjectGraphicsSprite(OBJ_EVENT_GFX_MYSTERY_GIFT_MAN, SpriteCallbackDummy, 56, 37, 0);
     gSprites[spriteId].oam.priority = 3;
+}
+
+static void NamingScreen_CreateSilverIcon(void)
+{
+    u8 spriteId;
+    spriteId = CreateObjectGraphicsSprite(OBJ_EVENT_GFX_SILVER, SpriteCallbackDummy, 56, 37, 0);
+    gSprites[spriteId].oam.priority = 3;
+    StartSpriteAnim(&gSprites[spriteId], ANIM_STD_GO_SOUTH);
 }
 
 //--------------------------------------------------
@@ -2179,7 +2189,7 @@ static const struct NamingScreenTemplate sRivalNamingScreenTemplate =
 {
     .copyExistingString = FALSE,
     .maxChars = PLAYER_NAME_LENGTH,
-    .iconFunction = 5,
+    .iconFunction = 6,
     .addGenderIcon = FALSE,
     .initialPage = KBPAGE_LETTERS_UPPER,
     .unused = 35,
