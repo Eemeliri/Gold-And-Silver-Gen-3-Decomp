@@ -353,7 +353,7 @@ NewBarkTown_Lab_EventScript_PoliceYes::
 	goto NewBarkTown_Lab_EventScript_PoliceYes2
 
 NewBarkTown_Lab_EventScript_PoliceYes3::
-	msgbox NewBarkTown_Lab_Text_Officer3, MSGBOX_DEFAULT
+	msgbox NewBarkTown_Lab_Text_Officer3, MSGBOX_DEFAULT @okay, for some reason this script doesn't take effect at all... Added a duplicate after this because it was a workaround.
 	msgbox NewBarkTown_Lab_Text_Officer3, MSGBOX_DEFAULT
 	closemessage
 	applymovement LOCALID_COP, NewBarkTown_Lab_Movement_CopLeaves
@@ -763,7 +763,7 @@ NewBarkTown_Lab_Text_ElmPokeBall:
 @THEFT================================================================================
 
 NewBarkTown_Lab_Text_ElmAfterTheft1:
-	.string "ELM: {PLAYER}, this is {RIVAL} terrible…\p"
+	.string "ELM: {PLAYER}, this is terrible…\p"
 	.string "Oh, yes, what was MR. POKéMON's\n"
 	.string "big discovery?$"
 
