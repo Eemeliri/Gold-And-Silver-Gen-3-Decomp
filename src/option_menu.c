@@ -1044,8 +1044,8 @@ static void PSS_DrawChoices(u8 selection)
     styles[1] = 0;
     styles[selection] = 1;
     
-    DrawOptionMenuChoice(gText_BattleSceneOn, 104, YPOS_PSS, styles[0]);
-    DrawOptionMenuChoice(gText_BattleSceneOff, GetStringRightAlignXOffset(FONT_NORMAL, gText_BattleSceneOff, 198), YPOS_PSS, styles[1]);
+    DrawOptionMenuChoice(gText_Gen4Plus, 104, YPOS_PSS, styles[0]);
+    DrawOptionMenuChoice(gText_Gen3andLower, GetStringRightAlignXOffset(FONT_NORMAL, gText_Gen3andLower, 198), YPOS_PSS, styles[1]);
 }
 static u8 Terrain_ProcessInput(u8 selection)
 {

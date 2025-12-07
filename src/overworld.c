@@ -3732,3 +3732,14 @@ void CB2_BugContestWhiteOut(void){
         ScriptContext_SetupScript(BugContest_EventScript_WhiteOut);
     }
 }
+
+u8 NuzlockeGetCurrentRegionMapSectionId(void) //tx_randomizer_and_challenges @Kurausukun
+{
+    u8 regionMapSectionId = GetCurrentRegionMapSectionId();
+
+    #ifndef NDEBUG
+    MgbaPrintf(MGBA_LOG_DEBUG, "location.mapGroup=%d; location.mapNum=%d; location.regionMapSectionId=%d", gSaveBlock1Ptr->location.mapGroup, gSaveBlock1Ptr->location.mapNum, Overworld_GetMapHeaderByGroupAndId(gSaveBlock1Ptr->location.mapGroup, gSaveBlock1Ptr->location.mapNum)->regionMapSectionId);
+    #endif
+
+    return regionMapSectionId;
+}

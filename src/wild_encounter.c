@@ -507,6 +507,11 @@ void CreateWildMon(u16 species, u8 level)
         checkCuteCharm = FALSE;
         break;
     }
+    if (FlagGet(FLAG_RANDOMIZER))
+    {
+        species = GetSpeciesRandomSeeded(species, 0, 0);
+        CreateMonWithNature(&gEnemyParty[0], species, level, USE_RANDOM_IVS, PickWildMonNature());
+    }
 
     if (checkCuteCharm
         && !GetMonData(&gPlayerParty[0], MON_DATA_SANITY_IS_EGG)

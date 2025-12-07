@@ -4230,13 +4230,29 @@ static void Cmd_tryfaintmon(void)
         }
         if (cmd->battler == BS_ATTACKER)
         {
-            destinyBondBattler = gBattlerTarget;
-            faintScript = BattleScript_FaintAttacker;
+            if (FlagGet(FLAG_NUZLOCKE))
+            {
+                destinyBondBattler = gBattlerTarget;
+                faintScript = BattleScript_FaintAttackerNuzlocke;
+            }
+            else
+            {
+                destinyBondBattler = gBattlerTarget;
+                faintScript = BattleScript_FaintAttacker;
+            }
         }
         else
         {
-            destinyBondBattler = gBattlerAttacker;
-            faintScript = BattleScript_FaintTarget;
+            if (FlagGet(FLAG_NUZLOCKE))
+            {
+                destinyBondBattler = gBattlerAttacker;
+                faintScript = BattleScript_FaintTargetNuzlocke;
+            }
+            else
+            {
+                destinyBondBattler = gBattlerAttacker;
+                faintScript = BattleScript_FaintTarget;
+            }
         }
         if (!(gAbsentBattlerFlags & (1u << battler))
          && !IsBattlerAlive(battler))

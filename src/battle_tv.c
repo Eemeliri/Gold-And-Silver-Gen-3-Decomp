@@ -129,7 +129,7 @@ static const u16 sSpecialBattleStrings[] =
     STRINGID_PKMNAFFLICTEDBYCURSE, STRINGID_PKMNSAPPEDBYLEECHSEED, STRINGID_PKMNLOCKEDINNIGHTMARE,
     STRINGID_PKMNHURTBY, STRINGID_PKMNHURTBYBURN, STRINGID_PKMNHURTBYPOISON,
     STRINGID_PKMNHURTBYSPIKES, STRINGID_ATTACKERFAINTED, STRINGID_TARGETFAINTED,
-    STRINGID_PKMNHITWITHRECOIL, STRINGID_PKMNCRASHED, TABLE_END
+    STRINGID_PKMNHITWITHRECOIL, STRINGID_PKMNCRASHED, STRINGID_MON_DIED, STRINGID_MON_DIED_2, TABLE_END
 };
 
 // code
@@ -453,6 +453,7 @@ void BattleTv_SetDataBasedOnString(enum StringID stringId)
         tvPtr->pos[atkSide][atkFlank].mudSportMoveSlot = moveSlot;
         break;
     case STRINGID_ATTACKERFAINTED:
+    case STRINGID_MON_DIED:
         AddPointsOnFainting(FALSE);
     case STRINGID_RETURNMON:
         if (tvPtr->pos[atkSide][atkFlank].waterSportMonId != 0)
@@ -467,6 +468,7 @@ void BattleTv_SetDataBasedOnString(enum StringID stringId)
         }
         break;
     case STRINGID_TARGETFAINTED:
+    case STRINGID_MON_DIED_2:
         AddPointsOnFainting(TRUE);
         if (tvPtr->pos[atkSide][defFlank].waterSportMonId != 0)
         {

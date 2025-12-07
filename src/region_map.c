@@ -1894,6 +1894,7 @@ static void CreateFlyDestIcons(void)
     }
 }
 
+
 // Draw a red outline box on the mapsec if its corresponding flag has been set
 // Only used for Battle Frontier, but set up to handle more
 static void TryCreateRedOutlineFlyDestIcons(void)

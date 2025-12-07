@@ -2867,13 +2867,14 @@ Gender: Male
 Music: Silver
 Double Battle: No
 AI: Basic Trainer
+Mugshot: Purple
 
 Totodile
 Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_RIVAL_TOTODILE_2 ===
-Name: Silver
+Name: {RIVAL}
 Class: Rival
 Pic: Silver
 Gender: Male
@@ -2881,6 +2882,7 @@ Music: Silver
 Items: Potion
 Double Battle: No
 AI: Basic Trainer
+Mugshot: Yellow
 
 Zubat
 Level: 15
@@ -2907,7 +2909,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 - Leer
 
 === TRAINER_RIVAL_TOTODILE_3 ===
-Name: Silver
+Name: {RIVAL}
 Class: Rival
 Pic: Silver
 Gender: Male
@@ -2915,6 +2917,7 @@ Music: Silver
 Items: Super Potion
 Double Battle: No
 AI: Basic Trainer
+Mugshot: Blue
 
 Larvitar
 Level: 22
@@ -2949,7 +2952,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 - Mud Slap
 
 === TRAINER_RIVAL_TOTODILE_4 ===
-Name: Silver
+Name: {RIVAL}
 Class: Rival
 Pic: Silver
 Gender: Male
@@ -2957,6 +2960,7 @@ Music: Silver
 Items: Super Potion
 Double Battle: No
 AI: Basic Trainer
+Mugshot: Blue
 
 Pupitar
 Level: 39
@@ -2999,7 +3003,7 @@ IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 - Bite
 
 === TRAINER_RIVAL_TOTODILE_5 ===
-Name: Silver
+Name: {RIVAL}
 Class: Rival
 Pic: Silver
 Gender: Male
@@ -3007,6 +3011,7 @@ Music: Silver
 Items: Hyper Potion
 Double Battle: No
 AI: Basic Trainer
+Mugshot: Pink
 
 Ursaring @ Chesto Berry
 Level: 45
@@ -3057,7 +3062,7 @@ IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 - Fire Punch
 
 === TRAINER_RIVAL_TOTODILE_6 ===
-Name: Silver
+Name: {RIVAL}
 Class: Rival
 Pic: Silver
 Gender: Male
@@ -3065,6 +3070,7 @@ Music: Silver
 Items: Full Restore / Full Restore
 Double Battle: No
 AI: Basic Trainer
+Mugshot: Green
 
 Ursaluna Bloodmoon @ Chesto Berry
 Level: 64
@@ -3115,7 +3121,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Fire Blast
 
 === TRAINER_RIVAL_TOTODILE_7 ===
-Name: Silver
+Name: {RIVAL}
 Class: Rival
 Pic: Silver
 Gender: Male
@@ -3123,6 +3129,7 @@ Music: Silver
 Items: Full Restore / Full Restore
 Double Battle: No
 AI: Basic Trainer
+Mugshot: Pink
 
 Ursaluna Bloodmoon @ Chesto Berry
 Level: 68
@@ -3520,7 +3527,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Endeavor
 
 === TRAINER_RIVAL_CHIKORITA_7 ===
-Name: Silver
+Name: {RIVAL}
 Class: Rival
 Pic: Silver
 Gender: Male
@@ -3528,6 +3535,7 @@ Music: Silver
 Items: Full Restore / Full Restore
 Double Battle: No
 AI: Basic Trainer
+Mugshot: Pink
 
 Ursaluna Bloodmoon @ Chesto Berry
 Level: 68
@@ -3602,13 +3610,14 @@ Gender: Male
 Music: Silver
 Double Battle: No
 AI: Basic Trainer
+Mugshot: Purple
 
 Chikorita
 Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_RIVAL_CHIKORITA_3 ===
-Name: Silver
+Name: {RIVAL}
 Class: Rival
 Pic: Silver
 Gender: Male
@@ -3616,6 +3625,7 @@ Music: Silver
 Items: Super Potion
 Double Battle: No
 AI: Basic Trainer
+Mugshot: Blue
 
 Larvitar
 Level: 22
@@ -3650,7 +3660,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 - Leech Seed
 
 === TRAINER_RIVAL_CHIKORITA_2 ===
-Name: Silver
+Name: {RIVAL}
 Class: Rival
 Pic: Silver
 Gender: Male
@@ -3658,6 +3668,7 @@ Music: Silver
 Items: Potion
 Double Battle: No
 AI: Basic Trainer
+Mugshot: Yellow
 
 Zubat
 Level: 15
@@ -5187,7 +5198,7 @@ Level: 63
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_RIVAL_CYNDAQUIL_2 ===
-Name: Silver
+Name: {RIVAL}
 Class: Rival
 Pic: Silver
 Gender: Male
@@ -5195,6 +5206,7 @@ Music: Silver
 Items: Potion
 Double Battle: No
 AI: Basic Trainer
+Mugshot: Yellow
 
 Zubat
 Level: 15
@@ -5259,7 +5271,7 @@ Level: 56
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_RIVAL_CYNDAQUIL_5 ===
-Name: Silver
+Name: {RIVAL}
 Class: Rival
 Pic: Silver
 Gender: Male
@@ -5267,6 +5279,7 @@ Music: Silver
 Items: Hyper Potion
 Double Battle: No
 AI: Basic Trainer
+Mugshot: Pink
 
 Ursaring @ Chesto Berry
 Level: 45
@@ -5317,7 +5330,7 @@ IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 - Fire Punch
 
 === TRAINER_RIVAL_CYNDAQUIL_4 ===
-Name: Silver
+Name: {RIVAL}
 Class: Rival
 Pic: Silver
 Gender: Male
@@ -5325,6 +5338,7 @@ Music: Silver
 Items: Super Potion
 Double Battle: No
 AI: Basic Trainer
+Mugshot: Blue
 
 Pupitar
 Level: 39
@@ -8529,7 +8543,7 @@ IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Thunder Punch
 
 === TRAINER_RIVAL_CHIKORITA_5 ===
-Name: Silver
+Name: {RIVAL}
 Class: Rival
 Pic: Silver
 Gender: Male
@@ -8537,6 +8551,7 @@ Music: Silver
 Items: Hyper Potion
 Double Battle: No
 AI: Basic Trainer
+Mugshot: Pink
 
 Ursaring @ Chesto Berry
 Level: 45
@@ -9491,7 +9506,7 @@ Level: 58
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_RIVAL_CHIKORITA_4 ===
-Name: Silver
+Name: {RIVAL}
 Class: Rival
 Pic: Silver
 Gender: Male
@@ -9499,6 +9514,7 @@ Music: Silver
 Items: Hyper Potion
 Double Battle: No
 AI: Basic Trainer
+Mugshot: Pink
 
 Pupitar
 Level: 39
@@ -9565,13 +9581,14 @@ Gender: Male
 Music: Silver
 Double Battle: No
 AI: Basic Trainer
+Mugshot: Purple
 
 Cyndaquil
 Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_RIVAL_CYNDAQUIL_3 ===
-Name: Silver
+Name: {RIVAL}
 Class: Rival
 Pic: Silver
 Gender: Male
@@ -9579,6 +9596,7 @@ Music: Silver
 Items: Super Potion
 Double Battle: No
 AI: Basic Trainer
+Mugshot: Blue
 
 Larvitar
 Level: 22
@@ -9613,7 +9631,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 - Smokescreen
 
 === TRAINER_RIVAL_CHIKORITA_6 ===
-Name: Silver
+Name: {RIVAL}
 Class: Rival
 Pic: Silver
 Gender: Male
@@ -9621,6 +9639,7 @@ Music: Silver
 Items: Full Restore / Full Restore
 Double Battle: No
 AI: Basic Trainer
+Mugshot: Green
 
 Ursaluna Bloodmoon @ Chesto Berry
 Level: 64
@@ -9773,7 +9792,7 @@ IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 - Iron Tail
 
 === TRAINER_RIVAL_CYNDAQUIL_7 ===
-Name: Silver
+Name: {RIVAL}
 Class: Rival
 Pic: Silver
 Gender: Male
@@ -9781,6 +9800,7 @@ Music: Silver
 Items: Full Restore / Full Restore
 Double Battle: No
 AI: Basic Trainer
+Mugshot: Pink
 
 Ursaluna Bloodmoon @ Chesto Berry
 Level: 68
@@ -9831,7 +9851,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Fire Blast
 
 === TRAINER_RIVAL_CYNDAQUIL_6 ===
-Name: Silver
+Name: {RIVAL}
 Class: Rival
 Pic: Silver
 Gender: Male
@@ -9839,6 +9859,7 @@ Music: Silver
 Items: Full Restore / Full Restore
 Double Battle: No
 AI: Basic Trainer
+Mugshot: Green
 
 Ursaluna Bloodmoon @ Chesto Berry
 Level: 64

@@ -10531,7 +10531,7 @@ enum DamageCategory GetBattleMoveCategory(u32 move)
 
     if (B_PHYSICAL_SPECIAL_SPLIT <= GEN_4)
         return gTypesInfo[GetBattleMoveType(move)].damageCategory;
-    if (gSaveBlock2Ptr->optionsPSS == FALSE)
+    if (gSaveBlock2Ptr->optionsPSS == TRUE)
         return gTypesInfo[GetBattleMoveType(move)].damageCategory;
 
     return GetMoveCategory(move);

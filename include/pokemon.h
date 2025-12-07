@@ -907,5 +907,6 @@ struct Pokemon *GetSavedPlayerPartyMon(u32 index);
 u8 *GetSavedPlayerPartyCount(void);
 void SavePlayerPartyMon(u32 index, struct Pokemon *mon);
 u32 IsSpeciesOfType(u32 species, u32 type);
+u16 GetSpeciesRandomSeeded(u16 species, u8 type, u16 additionalOffset);
 
 #endif // GUARD_POKEMON_H

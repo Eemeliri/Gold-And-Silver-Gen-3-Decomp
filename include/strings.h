@@ -155,7 +155,7 @@ extern const u8 gText_Cushion[];
 extern const u8 gText_Decorate[];
 extern const u8 gText_PutAway[];
 extern const u8 gText_Toss2[];
-extern const u8 gText_Hoenn[];
+extern const u8 gText_Map[];
 extern const u8 gText_Ferry[];
 extern const u8 gText_SecretBase[];
 extern const u8 gText_Hideout[];
@@ -2553,4 +2553,6 @@ extern const u8 gText_HnSHardcore[];
 extern const u8 gText_HnSNuzlocke[];
 extern const u8 gText_HnS[];
 extern const u8 gText_ExpandedPlaceholder_Silver[];
+extern const u8 gText_Gen4Plus[];
+extern const u8 gText_Gen3andLower[];
 #endif // GUARD_STRINGS_H

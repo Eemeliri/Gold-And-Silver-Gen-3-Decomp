@@ -590,3 +590,4 @@ gSpecials::
 	def_special NuzlockeSilentSave
 	def_special LevelCapToString
 	def_special NameRival
+	def_special GetRandomSpeciesScripted

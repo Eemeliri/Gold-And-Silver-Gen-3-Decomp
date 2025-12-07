@@ -267,4 +267,5 @@ const void *RandomElementArrayDefault(enum RandomTag, const void *array, size_t 
 
 u8 RandomWeightedIndex(u8 *weights, u8 length);
 
+u32 RandomSeededModulo(u32 value, u16 modulo);
 #endif // GUARD_RANDOM_H
